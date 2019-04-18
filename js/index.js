@@ -27,10 +27,12 @@ function checkForm(){
   let entername = document.querySelector("#name").value;
   let enteraddress = document.querySelector("#email").value;
   let entermsg = document.querySelector("#message").value;
+  let enterphone = document. querySelector("#phone").value;
 
   let namemsg = document.querySelector("#nameError");
   let addrmsg = document.querySelector("#emailError");
   let msgmsg = document.querySelector("#msgError");
+  let phonemsg = document.querySelector("#phoneError")
 
   var checked = true;
 
@@ -56,13 +58,22 @@ function checkForm(){
 
   if (entermsg.length===0){
     msgmsg.style.display="block";
-      console.log("there's an address");
+      console.log("there's a message");
       checked = false;
     }
   else{
     msgmsg.style.display="none";
-    console.log("there is no address");
+    console.log("there is no message");
     };
 
-
+  if (entermsg.length===0){
+    phonemsg.style.display="block";
+    console.log("there's a phone umber");
+    checked = false;
+      }
+  else{
+    phonemsg.style.display="none";
+    console.log("there is no phone number");
+    };
   return checked;
+};
