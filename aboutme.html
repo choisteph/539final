@@ -39,16 +39,18 @@
       </div>
       <div class ="infoform">
         <form onsubmit="return checkForm()" method="POST"  action="https://formspree.io/stchoi@umich.edu" >
-        <legend>Send me a Message</legend>
-          <label for="name">Name</label>          <input type="text" id="name" name="name" placeholder="my name">
-          <p class="errorMsg" id="nameError">Please enter your name!</p>
-          <label for="email">Email</label>        <input type="email" id="email" name="email" placeholder="email@email.com">
-          <p class="errorMsg" id="emailError">Please enter your email address!</p>
-          <label for="phone">Phone Number</label>  <input type="tel" id="phone" name="phone" placeholder="123-456-7890">
-          <p class="errorMsg" id="phoneError">Please enter your phone number!</p>
-          <label for="message">Your Message</label>          <input type="text" id="message" name="message" placeholder="type your message here">
-          <p class="errorMsg" id="msgError">Please enter your message!</p>
-          <input type="submit" class="button" value="click me to submit">
+          <fieldset>
+            <legend>Send me a Message</legend>
+            <label for="name">Name</label>          <input type="text" id="name" name="name" placeholder="my name">
+            <p class="errorMsg" id="nameError">Please enter your name!</p>
+            <label for="email">Email</label>        <input type="email" id="email" name="email" placeholder="email@email.com">
+            <p class="errorMsg" id="emailError">Please enter your email address!</p>
+            <label for="phone">Phone Number</label>  <input type="tel" id="phone" name="phone" placeholder="123-456-7890">
+            <p class="errorMsg" id="phoneError">Please enter your phone number!</p>
+            <label for="message">Your Message</label>          <input type="text" id="message" name="message" placeholder="type your message here">
+            <p class="errorMsg" id="msgError">Please enter your message!</p>
+          </fieldset>
+            <input type="submit" class="button" value="click me to submit">
         </form>
       </div>
     <script src="js/index.js"></script>
