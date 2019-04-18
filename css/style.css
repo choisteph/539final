@@ -12,6 +12,7 @@
   padding: 12px;
   display: none;
 }
+
 #main{
   padding-top: 50px;
   min-height: 50vh;
@@ -460,7 +461,6 @@ input:focus{
   }
   .header img{
     width: 12vw;
-    padding: 12px;
     display: block;
   }
   .projectsection{
