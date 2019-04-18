@@ -1,22 +1,25 @@
 .header{
   background-color: #606772;
-  position: fixed;
-  top: 0px;
   color: white;
   width: 100vw;
   min-height: 20vh;
-  max-height: 30vh;
+  max-height: 40vh;
+  position: relative;
+  top: -16px;
 }
-
+.header img{
+  width: 5vw;
+  padding: 12px;
+  display: none;
+}
 #main{
-  display: block;
-  padding-top: 120px;
+  padding-top: 50px;
   min-height: 50vh;
 
 }
 body{
+  background-color:#FFFFFF;
   position: relative;
-    background-color:#FFFFFF;
 }
 
 li{
@@ -66,10 +69,6 @@ p{
   font-family: helvetica;
   line-height: 16pt;
   background: white;
-}
-
-.navigation a{
-  font-family: 'Montserrat', sans-serif;
 }
 
 a.skip{
@@ -132,7 +131,6 @@ iframe{
   text-decoration: none;
   font-family: 'Montserrat', sans-serif;
 }
-
 
 .profileblock img{
 	width: 300px;
@@ -241,6 +239,16 @@ iframe{
   color: white;
 }
 
+.navigation{
+  background-color:#606772;
+  width: 100vw;
+  top: 0px;
+}
+
+#navbar {
+  overflow: hidden;
+}
+
 .navigation a:not(.current){
   display: none;}
 
@@ -271,6 +279,7 @@ iframe{
 
 .navigation.responsive {
   position: relative;
+  background-color: #606772;
 }
 .navigation.responsive .icon {
   position: absolute;
@@ -282,6 +291,16 @@ iframe{
     float: none;
     display: block;
 }
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+
 .accordion {
   background-color: #eee;
   color: black;
@@ -372,18 +391,17 @@ input:focus{
 
 @media only screen and (min-width:800px){
   .header{
-    background-color: #606772;
-    position: fixed;
-    color: white;
-    width: 100vw;
-    min-height: 20vh;
-    max-height: 30vh;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     align-items: center;
     justify-content: center;
   }
+  .header img{
+    width: 12vw;
+    display: block;
+  }
+
   .mainpageimages{
     display: flex;
     flex-direction: row;
@@ -414,6 +432,13 @@ input:focus{
     height: 100vh;
 
   }
+  .navigation{
+    display: flex;
+    flex-direction: row;
+    wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+  }
   .navigation a:not(.current){
     display: block;
   }
@@ -421,23 +446,23 @@ input:focus{
     display: none;
   }
 
+
+
 }
 
 @media only screen and (min-width:1200px){
   .header{
-    background-color: #606772;
-    position: fixed;
-    color: white;
-    width: 100vw;
-    min-height: 20vh;
-    max-height: 30vh;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     align-items: center;
     justify-content: center;
   }
-
+  .header img{
+    width: 12vw;
+    padding: 12px;
+    display: block;
+  }
   .projectsection{
     padding: 90px;
   }
@@ -469,4 +494,5 @@ input:focus{
   .navigation .icon {
     display: none;
   }
+
 }
