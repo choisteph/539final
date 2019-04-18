@@ -22,3 +22,47 @@ for (i = 0; i < acc.length; i++) {
     }
   });
 };
+
+function checkForm(){
+  let entername = document.querySelector("#name").value;
+  let enteraddress = document.querySelector("#email").value;
+  let entermsg = document.querySelector("#message").value;
+
+  let namemsg = document.querySelector("#nameError");
+  let addrmsg = document.querySelector("#emailError");
+  let msgmsg = document.querySelector("#msgError");
+
+  var checked = true;
+
+  if (entername.length===0){
+    namemsg.style.display="block";
+    console.log("there's no name");
+    checked = false;
+      }
+  else{
+    namemsg.style.display="none";
+    console.log("there is a name");
+      };
+
+  if (enteraddress.length===0){
+    addrmsg.style.display="block";
+    console.log("there's an address");
+    checked = false;
+      }
+  else{
+    addrmsg.style.display="none";
+    console.log("there is no address");
+      };
+
+  if (entermsg.length===0){
+    msgmsg.style.display="block";
+      console.log("there's an address");
+      checked = false;
+    }
+  else{
+    msgmsg.style.display="none";
+    console.log("there is no address");
+    };
+
+
+  return checked;

@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-    <script type="text/javascript" src="js/index.js"></script>
+
 
     <title>About Me</title>
   </head>
@@ -38,6 +38,20 @@
           <p>Please contact me at my email stchoi@umich.edu</p>
         </div>
       </div>
+      <div class ="infoform">
+        <form onsubmit="return checkForm()" method="POST"  action="https://formspree.io/stchoi@umich.edu" >
+          <legend>Send me a Message</legend>
+          <label for="name">Name</label>          <input type="text" id="name" name="name" placeholder="my name">
+          <p class="errorMsg" id="nameError">Please enter your name above!</p>
+          <label for="email">Email</label>        <input type="email" id="email" name="email" placeholder="email@email.com">
+          <p class="errorMsg" id="emailError">Please enter your email address!</p>
+          <label for="phone">Phone Number</label>  <input type="phone" id="phone" name="phone" placeholder="123-456-7890">
+          <label for="message">Your Message</label>          <input type="text" id="message" name="message" placeholder="type your message here">
+          <p class="errorMsg" id="msgError">Please enter your message!</p>
+          <input type="submit" class="button" value="click me to submit">
+        </form>
+      </div>
+    <script type="text/javascript" src="js/index.js"></script>
   </main>
   <footer>
     <div class="footer">

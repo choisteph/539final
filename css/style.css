@@ -1,19 +1,21 @@
 .header{
   background-color: #606772;
-  position: relative;
+  position: fixed;
+  top: 0px;
   color: white;
   width: 100vw;
   min-height: 20vh;
   max-height: 30vh;
 }
+
 #main{
   display: block;
+  padding-top: 120px;
   min-height: 50vh;
 
 }
 body{
   position: relative;
-    top: -16px;
     background-color:#FFFFFF;
 }
 
@@ -228,6 +230,9 @@ iframe{
   transform: rotateY(180deg);
   z-index: 1;
 }
+.flipback a{
+  font-family: 'Montserrat', sans-serif;
+}
 
 .current{
   text-transform: uppercase;
@@ -277,11 +282,10 @@ iframe{
     float: none;
     display: block;
 }
-
-
 .accordion {
   background-color: #eee;
-  color: #444;
+  color: black;
+  font-family: 'Montserrat', sans-serif;
   cursor: pointer;
   padding: 18px;
   width: 100%;
@@ -293,17 +297,72 @@ iframe{
 }
 
 .active, .accordion:hover {
-  background-color: #ccc;
+  background-color: #606060;
+  color: white;
 }
 
 .panel {
-  padding: 0 18px;
+  padding: 18px;
   display: none;
   background-color: white;
   overflow: hidden;
 }
 
+.infoform{
+  background-color: #eee;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 20px;
+  padding: 50px;
+}
 
+form{
+  font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box;
+
+}
+
+label{
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  line-height: 14pt;
+  padding-top: 20px;
+  display: inline-block;
+}
+
+input[type=text], input[type=email], input[type=phone], select, textarea{
+  display: block;
+  font-family: Helvetica, sans-serif;
+  font-size: 12pt;
+  padding: 10px;
+}
+
+input[type=submit]{
+  cursor: pointer;
+  padding:10px;
+  border-radius: 4px;
+}
+
+#message{
+  width: 50vw;
+  height: 150px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  background-color: white;
+  resize: none;
+}
+
+input:focus{
+  background-color: #e6f3f7;
+}
+
+.errorMsg {
+  font-family: 'Raleway', sans-serif;
+  color:red;
+  display:none;
+}
 
 @media (prefers-reduced-motion: reduce){
 	.animation:hover{
@@ -314,7 +373,7 @@ iframe{
 @media only screen and (min-width:800px){
   .header{
     background-color: #606772;
-    position: relative;
+    position: fixed;
     color: white;
     width: 100vw;
     min-height: 20vh;
@@ -325,17 +384,6 @@ iframe{
     align-items: center;
     justify-content: center;
   }
-
-  .header li{
-    display: inline;
-    position: relative;
-    margin-top: 40px;
-    padding: 30px;
-  }
-
-  /* .profile img{
-  	width: 45vw;
-  } */
   .mainpageimages{
     display: flex;
     flex-direction: row;
@@ -378,7 +426,7 @@ iframe{
 @media only screen and (min-width:1200px){
   .header{
     background-color: #606772;
-    position: relative;
+    position: fixed;
     color: white;
     width: 100vw;
     min-height: 20vh;
@@ -389,15 +437,6 @@ iframe{
     align-items: center;
     justify-content: center;
   }
-  .header li{
-    display: inline;
-    position: relative;
-    margin-top: 50px;
-    padding: 50px;
-  }
-  /* .profile img{
-  	width: 40%;
-  } */
 
   .projectsection{
     padding: 90px;
