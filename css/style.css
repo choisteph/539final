@@ -141,9 +141,10 @@ iframe{
   padding: 10px;
 }
 .profileblock p{
-  text-align: left;
+  text-align: justify;
   line-height: 20pt;
   padding: 10px;
+
 }
 
 .profile{
@@ -334,6 +335,7 @@ iframe{
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
+  align-content: space-around;
   margin: 20px;
   padding: 50px;
 }
@@ -380,6 +382,9 @@ input:focus{
 
 .errorMsg {
   font-family: 'Raleway', sans-serif;
+  background-color: transparent;
+  text-align: left;
+  padding: 2px;
   color:red;
   display:none;
 }
