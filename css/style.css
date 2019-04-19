@@ -188,7 +188,7 @@ iframe{
   background-color:#606772;
   width: 100vw;
   top: 0px;
-  z-index: 1;
+  z-index: 2;
 }
 
 #navbar {
@@ -381,18 +381,91 @@ input:focus{
 .flipfront{
   background-color: white;
   color: black;
-  z-index: 3;
+  z-index: 4;
 }
 
 .flipback{
   background-color: white;
   color: black;
   transform: rotateY(180deg);
-  z-index: 2;
+  z-index:3;
 }
 .flipback a{
   font-family: 'Montserrat', sans-serif;
 }
+
+#modalimg501 {
+  border: 1px solid #ccc;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#modalimg501:hover{
+  opacity: 0.7;}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 0; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  overflow: auto;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: white; /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  opacity: 1;
+}
+
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+.modal-content, #caption {
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {transform:scale(0)}
+  to {transform:scale(1)}
+}
+
+.close {
+  position: relative;
+  top: 15px;
+  right: -410px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover, .close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+
+
+
 
 @media (prefers-reduced-motion: reduce){
 	.animation:hover{
