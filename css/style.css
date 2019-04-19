@@ -18,6 +18,10 @@
   min-height: 50vh;
 
 }
+.mainpageinfo{
+  padding: 10px 50px 10px 50px;
+}
+
 body{
   background-color:#FFFFFF;
   position: relative;
@@ -156,14 +160,6 @@ iframe{
   padding: 10px;
 }
 
-.mainpageimages{
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-}
 
 .allprojects{
   display: flex;
@@ -181,59 +177,6 @@ iframe{
   width: 90vw;
   padding: 10px;
 }
-
-.flipcard{
-  margin: 30px;
-  background-color: white;
-  width: 250px;
-  height: 250px;
-}
-
-.flipcard h2{
-  padding: 20px;
-}
-
-.flipcard img{
-  width: 250px;
-}
-
-.flipinner{
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-}
-
-.flipcard:hover .flipinner{
-  transform: rotateY(180deg);
-}
-
-.flipfront, .flipback{
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-}
-
-.flipfront{
-  background-color: white;
-  color: black;
-  z-index: 2;
-}
-
-.flipback{
-  background-color: white;
-  color: black;
-  transform: rotateY(180deg);
-  z-index: 1;
-}
-.flipback a{
-  font-family: 'Montserrat', sans-serif;
-}
-
 .current{
   text-transform: uppercase;
   font-style: bold;
@@ -245,6 +188,7 @@ iframe{
   background-color:#606772;
   width: 100vw;
   top: 0px;
+  z-index: 1;
 }
 
 #navbar {
@@ -255,8 +199,9 @@ iframe{
   display: none;}
 
 .navigation a:not(.current).icon{
-  display: block;
   float: right;
+  display: inline-block;
+
 }
 
 .navigation a:hover{
@@ -267,8 +212,8 @@ iframe{
 }
 
 .navigation a {
-  float: left;
-  display: block;
+  position:relative;
+  display: inline-block;
   color: #f2f2f2;
   font-family: 'Montserrat', sans-serif;
   letter-spacing: 2px;
@@ -290,17 +235,12 @@ iframe{
 }
 
 .navigation.responsive a {
-    float: none;
     display: block;
 }
 .sticky {
   position: fixed;
   top: 0;
   width: 100%;
-}
-
-.sticky + .content {
-  padding-top: 60px;
 }
 
 .accordion {
@@ -387,6 +327,71 @@ input:focus{
   padding: 2px;
   color:red;
   display:none;
+}
+
+.mainpageimages{
+  position:relative;
+  float: clear;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+
+}
+
+.flipcard{
+  position:relative;
+  margin: 30px;
+  background-color: white;
+  width: 250px;
+  height: 250px;
+}
+
+.flipcard h2{
+  padding: 20px;
+}
+
+.flipcard img{
+  width: 250px;
+}
+
+.flipinner{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flipcard:hover .flipinner{
+  transform: rotateY(180deg);
+}
+
+.flipfront, .flipback{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flipfront{
+  background-color: white;
+  color: black;
+  z-index: 3;
+}
+
+.flipback{
+  background-color: white;
+  color: black;
+  transform: rotateY(180deg);
+  z-index: 2;
+}
+.flipback a{
+  font-family: 'Montserrat', sans-serif;
 }
 
 @media (prefers-reduced-motion: reduce){
