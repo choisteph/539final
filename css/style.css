@@ -145,7 +145,7 @@ iframe{
   padding: 10px;
 }
 .profileblock p{
-  text-align: justify;
+  text-align: left;
   line-height: 20pt;
   padding: 10px;
 
@@ -448,8 +448,8 @@ input:focus{
 
 .close {
   position: relative;
-  top: 15px;
-  right: -410px;
+  top: 350px;
+  right: 0px;
   color: #f1f1f1;
   font-size: 40px;
   font-weight: bold;
